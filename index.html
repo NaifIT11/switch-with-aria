@@ -3,57 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      * , *::after , *::before{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      :root{
-        --bg-switch: #e5e5e5;
-        --bg-switch-on-click: #bef264;
-      }
-      button {
-        cursor: pointer;
-        background-color: transparent;
-        border: none;
-      }
-      .container {
-        padding: 5rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        translate: -50% -50%;
-        border: 0.125rem solid;
-        border-radius: 0.325rem;
-      }
-      .switch {
-        width: 50px;
-        height: 25px;
-        border: 0.325rem solid transparent;
-        border-radius: 1rem;
-        background-color: var(--bg-switch);
-      }
-      .switch--action{
-        background-color: #bef264 !important;
-        transition: all 0.3s ease-in-out;
-      }
-      .switch__circle{
-        height: 100%;
-        width: 45%;
-        background-color: #000;
-        border-radius: 100%;
-        translate: 0%;
-        transition: all 0.1s ease-in-out;
-      }
-      .switch__circle--action{
-        translate: 110%;
-      }
-    </style>
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
   </head>
   <body>
@@ -70,26 +20,7 @@
         <div class="switch__circle"></div>
       </button>
     </div>
-    <script>
-      const button = document.querySelector("button[role]");
-      const switchCircle = document.querySelector(".switch__circle")
-      button.addEventListener("click", (e) => {
-        switchCircle.classList.toggle("switch__circle--action");
-        button.classList.toggle("switch--action");
-
-        if (button.getAttribute("data-value") === "off") {
-          button.setAttribute("data-value", "on");
-        } else {
-          button.setAttribute("data-value", "off");
-        }
-        if (button.getAttribute("aria-checked") === "false") {
-          button.setAttribute("aria-checked", "true");
-        } else {
-          button.setAttribute("aria-checked", "false");
-        }
-
-        console.log(button.dataset.value);
-      });
+    <script src="index.js">
     </script>
   </body>
 </html>
