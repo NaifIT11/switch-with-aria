@@ -65,6 +65,7 @@
         aria-checked="false"
         class="switch"
         aria-label="switch controls"
+        autofocus
       >
         <div class="switch__circle"></div>
       </button>
@@ -89,12 +90,6 @@
 
         console.log(button.dataset.value);
       });
-
-      const checkbox = document.querySelector("input[type='checkbox']");
-
-      checkbox.addEventListener("change" , () => {
-        console.log(checkbox.value)
-      })
     </script>
   </body>
 </html>
