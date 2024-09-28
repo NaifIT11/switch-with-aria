@@ -6,46 +6,35 @@
   box-sizing: border-box;
 }
 :root {
-  --bg-switch: #e5e5e5;
-  --bg-switch-on-click: #bef264;
+
 }
 button {
   cursor: pointer;
   background-color: transparent;
   border: none;
 }
-.container {
-  padding: 5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
+
+.center{
   position: absolute;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  border: 0.125rem solid;
+}
+
+.btn--primary{
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
   border-radius: 0.325rem;
-}
-.switch {
-  width: 50px;
-  height: 25px;
-  border: 0.325rem solid transparent;
-  border-radius: 1rem;
-  background-color: var(--bg-switch);
-}
-.switch--action {
-  background-color: #bef264 !important;
-  transition: all 0.3s ease-in-out;
-}
-.switch__circle {
-  height: 100%;
-  width: 45%;
   background-color: #000;
-  border-radius: 100%;
-  translate: 0%;
-  transition: all 0.1s ease-in-out;
-}
-.switch__circle--action {
-  translate: 110%;
+  border: 2px solid;
+  color: white;
+  &:focus-visible{
+    outline: 2px solid;
+  }
+  &:hover{
+    background-color: rgb(0 0 0 / 0.8);
+  }
+  &:disabled{
+    background-color: rgb( 0 0 0 / 0.3);
+  }
 }
